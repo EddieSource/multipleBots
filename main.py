@@ -4,8 +4,8 @@ from selenium.webdriver.common.keys import Keys
 import Login
 
 browser = webdriver.Chrome('./chromedriver')
-# browser.get('http://linkedin.com')
-browser.get('https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin')
+browser.get('http://linkedin.com')
+
 sleep(1)    # wait for html to load
 try:
     browser.find_element_by_link_text('Sign in').click()
