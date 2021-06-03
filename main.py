@@ -45,11 +45,15 @@ while(1):
         for person in people:
             i += 1
             print(i)
+
+            # get the name of each person
+            name = person.find_element_by_xpath("../../..//span[@aria-hidden='true']").text
+
             person.click()
             sleep(1)
             browser.find_element_by_xpath("//span[text() = 'Add a note']/..").click()
             sleep(1)
-            browser.find_element_by_xpath("//textarea[@name='message']").send_keys('Hello')
+            browser.find_element_by_xpath("//textarea[@name='message']").send_keys('Hi ', name, ': how are you')
             sleep(1)
             browser.find_element_by_xpath("//button[@aria-label='Dismiss']").click()
             sleep(1)
