@@ -2,3 +2,4 @@ Login.py
 chromedriver
 venv/
 .idea/
+.DS_Store

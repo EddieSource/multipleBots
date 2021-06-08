@@ -53,13 +53,15 @@ while(1):
             sleep(1)
             browser.find_element_by_xpath("//span[text() = 'Add a note']/..").click()
             sleep(1)
-            browser.find_element_by_xpath("//textarea[@name='message']").send_keys('Hi ', name, ': how are you')
+            browser.find_element_by_xpath("//textarea[@name='message']").send_keys(
+                'Hi ', name, Login.text
+            )
             sleep(1)
-            browser.find_element_by_xpath("//button[@aria-label='Dismiss']").click()
-            sleep(1)
-            # Send the message
-            # browser.find_element_by_xpath("//span[text() = 'Send']/..").click()
+            # browser.find_element_by_xpath("//button[@aria-label='Dismiss']").click()
             # sleep(1)
+            # Send the message
+            browser.find_element_by_xpath("//span[text() = 'Send']/..").click()
+            sleep(1)
     finally:
         browser.execute_script('window.scrollTo(0, document.body.scrollHeight);')
         sleep(2)
