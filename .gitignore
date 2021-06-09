@@ -4,3 +4,8 @@ venv/
 .idea/
 .DS_Store
 __pycache__/
+
+*postscrape/postscrape/spiders/__pycache__/
+
+postscrape/company_url.csv
+postscrape/emails.csv
